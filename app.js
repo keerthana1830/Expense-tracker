@@ -1,7 +1,10 @@
 var express = require('express');
 const app = express()
 const mongoose = require("mongoose")
+const cors = require("cors")
 app.use(express.json())//Middleware to parse JSON data  
+app.use(cprs())//Middleware to enable CORS
+//To avoid cross origin resource sharing error which means the frontend and backend should be in the same domain 
 const {v4: uuidv4} = require('uuid')//to generate id automatically in the backend
 
 //Connecting mongodb database
